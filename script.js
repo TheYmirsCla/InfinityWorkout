@@ -6,39 +6,34 @@ function toggleDetails(id) {
 
 // Dark/Light mode toggle
 const themeToggle = document.getElementById('theme-toggle');
+
+// Check localStorage for user preference
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+  document.body.classList.add(savedTheme);
+  updateButtonText();
+}
+
+// Toggle theme on button click
 themeToggle.addEventListener('click', () => {
   document.body.classList.toggle('light-mode');
-  themeToggle.textContent = document.body.classList.contains('light-mode') ? 'Toggle Dark Mode' : 'Toggle Light Mode';
+  const currentTheme = document.body.classList.contains('light-mode') ? 'light-mode' : 'dark-mode';
+  localStorage.setItem('theme', currentTheme); // Save preference
+  updateButtonText();
 });
 
-// Smooth scrolling for navigation
-document.querySelectorAll('nav a').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
-});
+// Update button text based on current theme
+function updateButtonText() {
+  const isLightMode = document.body.classList.contains('light-mode');
+  themeToggle.textContent = isLightMode ? 'Toggle Dark Mode' : 'Toggle Light Mode';
+}
 
-// Handle form submission
-const contactForm = document.getElementById('contact-form');
-contactForm.addEventListener('submit', async (e) => {
-  e.preventDefault();
-
-  const formData = new FormData(contactForm);
-  const response = await fetch(contactForm.action, {
-    method: 'POST',
-    body: formData,
-    headers: {
-      'Accept': 'application/json'
-    }
-  });
-
-  if (response.ok) {
-    alert('Message sent successfully!');
-    contactForm.reset();
+// Apply saved theme on page load
+window.addEventListener('load', () => {
+  if (savedTheme === 'light-mode') {
+    document.body.classList.add('light-mode');
   } else {
-    alert('Oops! Something went wrong. Please try again.');
+    document.body.classList.remove('light-mode');
   }
+  updateButtonText();
 });
