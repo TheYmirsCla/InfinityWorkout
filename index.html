@@ -233,12 +233,13 @@
     <div class="container">
       <h2>Contact</h2>
       <p>Have questions or feedback? Reach out to me at <a href="mailto:en47489@gmail.com">en47489@gmail.com</a>.</p>
-      <form id="contact-form" action="https://formspree.io/f/mvojnqkj" method="POST">
-        <input type="text" name="name" id="name" placeholder="Your Name" required>
-        <input type="email" name="email" id="email" placeholder="Your Email" required>
-        <textarea name="message" id="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
+<form id="contact-form" action="https://formspree.io/f/mvojnqkj" method="POST">
+  <input type="hidden" name="_next" value="/thank-you.html">
+  <input type="text" name="name" id="name" placeholder="Your Name" required>
+  <input type="email" name="email" id="email" placeholder="Your Email" required>
+  <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send</button>
+</form>
     </div>
   </section>
 
