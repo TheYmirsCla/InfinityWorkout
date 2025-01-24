@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InfinityWorkup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>InfinityWorkup</h1>
+      <p>Hell, refined to its finest.</p>
+      <button id="theme-toggle">Toggle Dark Mode</button>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#workout-versions">Workout Versions</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="about">
+    <div class="container">
+      <h2>About InfinityWorkup</h2>
+      <p>
+        InfinityWorkup is a project that pushes boundaries and redefines what it means to embrace chaos. 
+        Dive into a world where hell meets artistry, and every detail is crafted to perfection.
+      </p>
+    </div>
+  </section>
+
+  <section id="workout-versions">
+    <div class="container">
+      <h2>Workout Versions</h2>
+      
+      <!-- Version 1: With Push-Ups -->
+      <div class="version">
+        <h3>Version 1: With Push-Ups</h3>
+
+        <!-- Beginner -->
+        <div class="difficulty">
+          <h4 onclick="toggleDetails('beginner1')">1. Beginner (The First Circle)</h4>
+          <div id="beginner1" class="details">
+            <p><strong>Work:</strong> 45 seconds per exercise</p>
+            <p><strong>Rest:</strong> 15 seconds between exercises</p>
+            <p><strong>Rounds:</strong> 3</p>
+            <p><strong>Rest between rounds:</strong> 1 minute</p>
+            <ul>
+              <li>Pistol Squats with Pulse (5-second descent, 3 pulses at the bottom, 5-second ascent)</li>
+              <li>Push-Ups with Shoulder Tap Hold (hold each shoulder tap for 2 seconds)</li>
+              <li>Jumping Lunges with Isometric Hold (hold the bottom of each lunge for 5 seconds)</li>
+              <li>Spiderman Push-Ups (knee to elbow on each rep, hold for 2 seconds)</li>
+              <li>Single-Leg Weighted Glute Bridges with Pulse (10-second hold at the top, then 3 pulses)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Normal -->
+        <div class="difficulty">
+          <h4 onclick="toggleDetails('normal1')">2. Normal (The Second Circle)</h4>
+          <div id="normal1" class="details">
+            <p><strong>Work:</strong> 60 seconds per exercise</p>
+            <p><strong>Rest:</strong> 15 seconds between exercises</p>
+            <p><strong>Rounds:</strong> 4</p>
+            <p><strong>Rest between rounds:</strong> 1 minute</p>
+            <ul>
+              <li>Pistol Squats with Double Pulse (5-second descent, 6 pulses at the bottom, 5-second ascent)</li>
+              <li>Archer Push-Ups (alternate sides, hold for 2 seconds at the bottom)</li>
+              <li>Jumping Lunges with Double Isometric Hold (hold the bottom of each lunge for 10 seconds)</li>
+              <li>Spiderman Push-Ups with Reach-Through (reach under your torso on each rep)</li>
+              <li>Single-Leg Weighted Glute Bridges with Double Pulse (20-second hold at the top, then 6 pulses)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Advanced -->
+        <div class="difficulty">
+          <h4 onclick="toggleDetails('advanced1')">3. Advanced (The Third Circle)</h4>
+          <div id="advanced1" class="details">
+            <p><strong>Work:</strong> 75 seconds per exercise</p>
+            <p><strong>Rest:</strong> 15 seconds between exercises</p>
+            <p><strong>Rounds:</strong> 5</p>
+            <p><strong>Rest between rounds:</strong> 1 minute</p>
+            <ul>
+              <li>Pistol Squats with Triple Pulse (5-second descent, 9 pulses at the bottom, 5-second ascent)</li>
+              <li>Plyometric Push-Ups (explode off the ground, hold landing for 2 seconds)</li>
+              <li>Jumping Lunges with Triple Isometric Hold (hold the bottom of each lunge for 15 seconds)</li>
+              <li>Spiderman Push-Ups with Rotation (rotate into a side plank on each rep)</li>
+              <li>Single-Leg Weighted Glute Bridges with Triple Pulse (30-second hold at the top, then 9 pulses)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Hard -->
+        <div class="difficulty">
+          <h4 onclick="toggleDetails('hard1')">4. Hard (The Fourth Circle)</h4>
+          <div id="hard1" class="details">
+            <p><strong>Work:</strong> 90 seconds per exercise</p>
+            <p><strong>Rest:</strong> 15 seconds between exercises</p>
+            <p><strong>Rounds:</strong> 6</p>
+            <p><strong>Rest between rounds:</strong> 1 minute</p>
+            <ul>
+              <li>Pistol Squats with Quad Pulse (5-second descent, 12 pulses at the bottom, 5-second ascent)</li>
+              <li>One-Arm Push-Ups (Assisted) (use your other hand for support, hold for 2 seconds at the bottom)</li>
+              <li>Jumping Lunges with Quad Isometric Hold (hold the bottom of each lunge for 20 seconds)</li>
+              <li>Spiderman Push-Ups with Leg Lift (lift your leg in the air during the side plank rotation)</li>
+              <li>Single-Leg Weighted Glute Bridges with Quad Pulse (40-second hold at the top, then 12 pulses)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Impossible -->
+        <div class="difficulty">
+          <h4 onclick="toggleDetails('impossible1')">5. Impossible (The Fifth Circle)</h4>
+          <div id="impossible1" class="details">
+            <p><strong>Work:</strong> 120 seconds per exercise</p>
+            <p><strong>Rest:</strong> 15 seconds between exercises</p>
+            <p><strong>Rounds:</strong> 7</p>
+            <p><strong>Rest between rounds:</strong> 1 minute</p>
+            <ul>
+              <li>Pistol Squats with Quintuple Pulse (5-second descent, 15 pulses at the bottom, 5-second ascent)</li>
+              <li>One-Arm Push-Ups (Unassisted) (hold for 3 seconds at the bottom)</li>
+              <li>Jumping Lunges with Quintuple Isometric Hold (hold the bottom of each lunge for 25 seconds)</li>
+              <li>Spiderman Push-Ups with Leg Lift and Hop (add a hop when transitioning between sides)</li>
+              <li>Single-Leg Weighted Glute Bridges with Quintuple Pulse (50-second hold at the top, then 15 pulses)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Version 2: Without Push-Ups -->
+      <div class="version">
+        <h3>Version 2: Without Push-Ups</h3>
+
+        <!-- Beginner -->
+        <div class="difficulty">
+          <h4 onclick="toggleDetails('beginner2')">1. Beginner (The First Circle)</h4>
+          <div id="beginner2" class="details">
+            <p><strong>Work:</strong> 45 seconds per exercise</p>
+            <p><strong>Rest:</strong> 15 seconds between exercises</p>
+            <p><strong>Rounds:</strong> 3</p>
+            <p><strong>Rest between rounds:</strong> 1 minute</p>
+            <ul>
+              <li>Pistol Squats with Pulse (5-second descent, 3 pulses at the bottom, 5-second ascent)</li>
+              <li>Plank Shoulder Taps with Hold (hold each shoulder tap for 2 seconds)</li>
+              <li>Jumping Lunges with Isometric Hold (hold the bottom of each lunge for 5 seconds)</li>
+              <li>Mountain Climbers with Cross-Body Hold (hold knee-to-elbow for 2 seconds each rep)</li>
+              <li>Single-Leg Weighted Glute Bridges with Pulse (10-second hold at the top, then 3 pulses)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Normal -->
+        <div class="difficulty">
+          <h4 onclick="toggleDetails('normal2')">2. Normal (The Second Circle)</h4>
+          <div id="normal2" class="details">
+            <p><strong>Work:</strong> 60 seconds per exercise</p>
+            <p><strong>Rest:</strong> 15 seconds between exercises</p>
+            <p><strong>Rounds:</strong> 4</p>
+            <p><strong>Rest between rounds:</strong> 1 minute</p>
+            <ul>
+              <li>Pistol Squats with Double Pulse (5-second descent, 6 pulses at the bottom, 5-second ascent)</li>
+              <li>Plank to Downward Dog with Hold (hold downward dog for 2 seconds each rep)</li>
+              <li>Jumping Lunges with Double Isometric Hold (hold the bottom of each lunge for 10 seconds)</li>
+              <li>Mountain Climbers with Double Cross-Body Hold (hold knee-to-elbow for 5 seconds each rep)</li>
+              <li>Single-Leg Weighted Glute Bridges with Double Pulse (20-second hold at the top, then 6 pulses)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Advanced -->
+        <div class="difficulty">
+          <h4 onclick="toggleDetails('advanced2')">3. Advanced (The Third Circle)</h4>
+          <div id="advanced2" class="details">
+            <p><strong>Work:</strong> 75 seconds per exercise</p>
+            <p><strong>Rest:</strong> 15 seconds between exercises</p>
+            <p><strong>Rounds:</strong> 5</p>
+            <p><strong>Rest between rounds:</strong> 1 minute</p>
+            <ul>
+              <li>Pistol Squats with Triple Pulse (5-second descent, 9 pulses at the bottom, 5-second ascent)</li>
+              <li>Plank to Side Plank with Reach-Through and Hold (hold side plank for 5 seconds each side)</li>
+              <li>Jumping Lunges with Triple Isometric Hold (hold the bottom of each lunge for 15 seconds)</li>
+              <li>Mountain Climbers with Triple Cross-Body Hold (hold knee-to-elbow for 10 seconds each rep)</li>
+              <li>Single-Leg Weighted Glute Bridges with Triple Pulse (30-second hold at the top, then 9 pulses)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Hard -->
+        <div class="difficulty">
+          <h4 onclick="toggleDetails('hard2')">4. Hard (The Fourth Circle)</h4>
+          <div id="hard2" class="details">
+            <p><strong>Work:</strong> 90 seconds per exercise</p>
+            <p><strong>Rest:</strong> 15 seconds between exercises</p>
+            <p><strong>Rounds:</strong> 6</p>
+            <p><strong>Rest between rounds:</strong> 1 minute</p>
+            <ul>
+              <li>Pistol Squats with Quad Pulse (5-second descent, 12 pulses at the bottom, 5-second ascent)</li>
+              <li>Plank to Side Plank with Reach-Through, Leg Lift, and Hold (hold side plank for 10 seconds each side)</li>
+              <li>Jumping Lunges with Quad Isometric Hold (hold the bottom of each lunge for 20 seconds)</li>
+              <li>Mountain Climbers with Quad Cross-Body Hold (hold knee-to-elbow for 15 seconds each rep)</li>
+              <li>Single-Leg Weighted Glute Bridges with Quad Pulse (40-second hold at the top, then 12 pulses)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Impossible -->
+        <div class="difficulty">
+          <h4 onclick="toggleDetails('impossible2')">5. Impossible (The Fifth Circle)</h4>
+          <div id="impossible2" class="details">
+            <p><strong>Work:</strong> 120 seconds per exercise</p>
+            <p><strong>Rest:</strong> 15 seconds between exercises</p>
+            <p><strong>Rounds:</strong> 7</p>
+            <p><strong>Rest between rounds:</strong> 1 minute</p>
+            <ul>
+              <li>Pistol Squats with Quintuple Pulse (5-second descent, 15 pulses at the bottom, 5-second ascent)</li>
+              <li>Plank to Side Plank with Reach-Through, Leg Lift, Rotation, and Hold (hold side plank for 15 seconds each side)</li>
+              <li>Jumping Lunges with Quintuple Isometric Hold (hold the bottom of each lunge for 25 seconds)</li>
+              <li>Mountain Climbers with Quintuple Cross-Body Hold (hold knee-to-elbow for 20 seconds each rep)</li>
+              <li>Single-Leg Weighted Glute Bridges with Quintuple Pulse (50-second hold at the top, then 15 pulses)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Have questions or feedback? Reach out to me at <a href="mailto:en47489@gmail.com">en47489@gmail.com</a>.</p>
+      <form id="contact-form" action="https://formspree.io/f/mvojnqkj" method="POST">
+        <input type="text" name="name" id="name" placeholder="Your Name" required>
+        <input type="email" name="email" id="email" placeholder="Your Email" required>
+        <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 InfinityWorkup. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
